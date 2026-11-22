@@ -1,131 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SSC2ADDA - Sarkari Result</title>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#f4f4f4;
-}
-
-header{
-background:#0d47a1;
-color:white;
-padding:20px;
-text-align:center;
-}
-
-nav{
-background:#1565c0;
-padding:10px;
-text-align:center;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:15px;
-font-weight:bold;
-}
-
-.container{
-width:90%;
-margin:20px auto;
-}
-
-.card{
-background:white;
-padding:20px;
-margin-bottom:20px;
-border-radius:8px;
-box-shadow:0 0 10px rgba(0,0,0,.1);
-}
-
-.card h2{
-color:#0d47a1;
-margin-bottom:10px;
-}
-
-.button{
-display:inline-block;
-padding:10px 20px;
-background:#e53935;
-color:white;
-text-decoration:none;
-border-radius:5px;
-margin-top:10px;
-}
-
-footer{
-background:#0d47a1;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:20px;
-}
-</style>
-
-</head>
-
-<body>
-
-<header>
-<h1>SSC2ADDA</h1>
-<p>Latest Government Jobs | Results | Admit Card | Answer Key</p>
-</header>
-
-<nav>
-<a href="#">Home</a>
-<a href="#">Latest Jobs</a>
-<a href="#">Results</a>
-<a href="#">Admit Card</a>
-<a href="#">Answer Key</a>
-<a href="#">Syllabus</a>
-<a href="#">Contact</a>
-</nav>
-
-<div class="container">
-
-<div class="card">
-<h2>Latest Government Jobs</h2>
-<p>Check all latest Central & State Government Jobs here.</p>
-<a href="#" class="button">View Jobs</a>
+<!doctype html>
+<html lang="hi"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="SSC2ADDA पर सरकारी नौकरी, SSC, Railway, Admit Card, Result, Answer Key और Study Material की जानकारी पाएं।">
+<meta name="theme-color" content="#092b63"><title>SSC2ADDA | Sarkari Job, Exam, Study & PDF</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<div class="ticker"><div class="wrap ticker-in"><span id="dateNow"></span><b>LATEST UPDATE</b><span>SSC2ADDA – सरकारी नौकरी और परीक्षा की तैयारी</span><span class="ticker-social">● YouTube　● Telegram　● WhatsApp</span></div></div>
+<header><div class="wrap head">
+<a class="logo" href="/"><span class="logo-icon">S2</span><span><strong>SSC<span>2</span>ADDA</strong><small>Sarkari Job | Exam | Study | PDF</small></span></a>
+<form id="searchForm" class="search"><input id="searchInput" placeholder="Job, Admit Card, Result खोजें..." aria-label="Search"><button>⌕</button></form>
+<button class="hamb" id="hamb">☰</button>
+</div><nav id="nav"><div class="wrap navin">
+<a href="/">⌂ Home</a><a href="#jobs">Latest Jobs</a><a href="#jobs">SSC ▾</a><a href="#jobs">Railway ▾</a><a href="#jobs">State Jobs ▾</a><a href="#admit">Admit Card</a><a href="#results">Result</a><a href="#answer">Answer Key</a><a href="#study">Study ▾</a><a href="#study">PDF</a>
+</div></nav></header>
+<main class="wrap">
+<section class="hero">
+<div><span class="eyebrow">YOUR EXAM PARTNER</span><h1>सरकारी नौकरी की तैयारी<br><em>अब होगी आसान!</em></h1><p>Latest Jobs, Admit Card, Result, Answer Key और Study Material – सब एक जगह।</p><a class="cta" href="#jobs">Latest Updates देखें →</a></div>
+<div class="hero-badge"><div class="seal">★</div><b>SSC2ADDA</b><span>Learn • Prepare • Succeed</span><small>आपकी तैयारी, आपकी सफलता</small></div>
+</section>
+<div class="ad-slot ad-top" data-ad="top"><span>Advertisement</span><div id="ad-top"></div></div>
+<section class="shortcuts">
+<a href="#jobs"><i>💼</i>Latest Jobs</a><a href="#jobs"><i>👥</i>SSC</a><a href="#jobs"><i>🚆</i>Railway</a><a href="#jobs"><i>🌳</i>Jharkhand</a><a href="#admit"><i>🎫</i>Admit Card</a><a href="#results"><i>🏆</i>Result</a><a href="#answer"><i>📝</i>Answer Key</a><a href="#study"><i>📚</i>Study Material</a><a href="#study"><i>📄</i>PDF Notes</a>
+</section>
+<div class="columns">
+<div class="primary">
+<section class="box" id="jobs"><div class="section-title"><div><small>CAREER UPDATES</small><h2>Latest Government Jobs</h2></div><a href="#jobs">View All →</a></div><div class="filters"><button class="selected" data-filter="all">All</button><button data-filter="SSC">SSC</button><button data-filter="Railway">Railway</button><button data-filter="Jharkhand">Jharkhand</button></div><div id="jobsList" class="post-list"></div></section>
+<div class="ad-slot ad-mid" data-ad="middle"><span>Advertisement</span><div id="ad-middle"></div></div>
+<section class="box" id="admit"><div class="section-title"><div><small>EXAM UPDATES</small><h2>Admit Card</h2></div></div><div id="admitList" class="post-list"></div></section>
+<section class="box" id="results"><div class="section-title"><div><small>DECLARATIONS</small><h2>Latest Results</h2></div></div><div id="resultsList" class="post-list"></div></section>
+<section class="box" id="answer"><div class="section-title"><div><small>EXAM SOLUTIONS</small><h2>Answer Key</h2></div></div><div id="answerList" class="post-list"></div></section>
+<section class="box" id="study"><div class="section-title"><div><small>PREPARATION ZONE</small><h2>Study Material & PDF</h2></div></div><div class="study-grid"><a href="#">📕 GK Notes PDF</a><a href="#">➗ Maths Tricks</a><a href="#">🧠 Reasoning PDF</a><a href="#">🌳 Jharkhand GK</a><a href="#">📜 History PDF</a><a href="#">🗺 Geography PDF</a></div></section>
 </div>
-
-<div class="card">
-<h2>Latest Results</h2>
-<p>SSC, Railway, UPSC, Banking, State Results.</p>
-<a href="#" class="button">Check Result</a>
-</div>
-
-<div class="card">
-<h2>Admit Card</h2>
-<p>Download Admit Cards for all competitive exams.</p>
-<a href="#" class="button">Download</a>
-</div>
-
-<div class="card">
-<h2>Answer Key</h2>
-<p>Official Answer Keys Available Here.</p>
-<a href="#" class="button">View</a>
-</div>
-
-</div>
-
-<footer>
-
-Copyright © 2026 SSC2ADDA
-
-</footer>
-
-</body>
-</html>
+<aside>
+<section class="box"><h3>Quick Links</h3><div class="quick"><a href="#jobs">SSC CGL</a><a href="#jobs">SSC CHSL</a><a href="#jobs">SSC MTS</a><a href="#jobs">Railway</a><a href="#jobs">Jharkhand GK</a><a href="#study">Current Affairs</a><a href="#study">Free PDF</a><a href="#study">Previous Year Papers</a></div></section>
+<div class="ad-slot ad-side" data-ad="sidebar"><span>Advertisement</span><div id="ad-sidebar"></div></div>
+<section class="box"><h3>Current Affairs</h3><ul class="link-list"><li><a href="#study">Daily Current Affairs</a></li><li><a href="#study">Top 50 Current Affairs Questions</a></li><li><a href="#study">Weekly Current Affairs PDF</a></li><li><a href="#study">Monthly Current Affairs</a></li></ul></section>
+<section class="box"><h3>Follow SSC2ADDA</h3><p class="muted">अपने सोशल मीडिया चैनल के लिंक यहाँ जोड़ें।</p><a class="social" href="#">Telegram Channel ↗</a><a class="social" href="#">WhatsApp Channel ↗</a></section>
+</aside></div>
+<div class="ad-slot ad-bottom" data-ad="bottom"><span>Advertisement</span><div id="ad-bottom"></div></div>
+<p class="disclaimer"><b>Disclaimer:</b> SSC2ADDA एक स्वतंत्र सूचना वेबसाइट है, सरकारी वेबसाइट नहीं। आवेदन से पहले संबंधित विभाग की आधिकारिक अधिसूचना अवश्य पढ़ें।</p>
+</main>
+<footer><div class="wrap foot"><div><a class="logo footlogo" href="/"><span class="logo-icon">S2</span><span><strong>SSC<span>2</span>ADDA</strong><small>Sarkari Job | Exam | Study | PDF</small></span></a><p>सरकारी नौकरी और प्रतियोगी परीक्षाओं की तैयारी के लिए आपका साथी।</p></div><div><h4>Important Links</h4><a href="about.html">About Us</a><a href="contact.html">Contact Us</a><a href="privacy.html">Privacy Policy</a><a href="disclaimer.html">Disclaimer</a></div><div><h4>Admin</h4><a href="admin.html">Admin Login</a><a href="#jobs">Latest Updates</a></div></div><div class="copyright">© <span id="year"></span> SSC2ADDA. All rights reserved.</div></footer>
+<script src="app.js"></script>
+</body></html>
